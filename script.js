@@ -30,19 +30,17 @@ for ( let winPatttern of winPatterns)
         
         else
         { 
-            
             turn1="X";
         } 
         document.getElementById("ok").innerHTML=`Winner: <br> ${turn1}`
         boxes.forEach((box)=>
 {
-    box.classList.add("disabled");
+        box.classList.add("disabled");
 })
     }
 }
 }
 }
-
 boxes.forEach((box)=>
 {
 box.addEventListener("click",Check=()=>
@@ -53,25 +51,25 @@ box.addEventListener("click",Check=()=>
     {
         turn1="O"
     }
-    
     else
     { 
-        
         turn1="X";
     } 
     checkWinner(); 
 })
 })
+
 button1.addEventListener("click",reset);
 function reset()
 {
     boxes.forEach((box)=>
     {
     box.innerHTML="";
-    box.classList.add("abled");
-    document.getElementById("ok").innerHTML=``
-    })
+    box.classList.remove("disabled");
+    document.getElementById("ok").innerHTML=""
+})
 }
+
 
 
 
