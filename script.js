@@ -32,10 +32,12 @@ for ( let winPatttern of winPatterns)
         { 
             turn1="X";
         } 
-        document.getElementById("ok").innerHTML=`Winner: <br> ${turn1}`
+        document.getElementById("ok").innerHTML=`Winner: <br> ${turn1} Is Winner`
+        
         boxes.forEach((box)=>
 {
         box.classList.add("disabled");
+        box.classList.add("borderbox");
 })
     }
 }
@@ -66,7 +68,8 @@ function reset()
     {
     box.innerHTML="";
     box.classList.remove("disabled");
-    document.getElementById("ok").innerHTML=""
+    document.getElementById("ok").innerHTML="";
+    box.classList.remove("borderbox");
 })
 }
 
